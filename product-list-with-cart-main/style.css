@@ -1,0 +1,419 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:hsl(13, 31%, 94%);
+    font-family: 'Red Hat Text', sans-serif; 
+    color: hsl(6, 23%, 59%);     
+}
+.container header h1{
+    font-weight: 800;
+    font-size: 2em;
+    color: hsl(14, 65%, 9%);
+    padding: 20px 0 0 70px;
+}
+.container main{
+    display: flex;
+}
+.container main section{
+    height: 100%;
+    gap: 50px;
+    margin: 15px 0 0 40px;
+}
+.container main .products{
+    width: 60vw;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    row-gap: 25px;
+    column-gap: 5px;
+    justify-content: center;
+}
+.container main .products article{
+    padding:0;
+}
+.container main .products article img{
+    width: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transform: all 0.4s;
+}
+.container main .products article p{
+    color: hsl(12, 20%, 44%);
+    font-size: 16px;
+}
+.container main .products article h3{
+    color: hsl(14, 65%, 9%);
+    font-size: 16px;
+}
+.container main .products article .price p{
+    color: hsl(14, 86%, 42%);
+    padding: 0;
+}
+.container main .products article .btn button{
+    position: relative;
+    left: 30px;
+    top: -29px;
+    background:#fff;
+    color:hsl(14, 65%, 9%);
+    border: 1px solid hsl(14, 65%, 9%);
+    border-radius: 120px;
+    padding: 10px 25px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+}
+.container main .products .svgImages svg{
+    display: none;
+}
+.container main .products article .btn {
+    display: flex;
+}
+.container main .products article .btn img{
+    width: 19px;
+    margin: auto;
+}
+
+.container main .newBtn button{
+    display: flex;
+}
+.container main .products article .svgMoins-button {
+    background:hsl(14, 86%, 42%) ;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    padding: 8px 5px;
+    position: relative;
+    right: 35px;
+}
+
+.container main .products article .svgPlus-button {
+    background: hsl(14, 86%, 42%);
+    border: 1px solid hsl(0, 0%, 100%);
+    padding: 4px 4px;
+    margin: 0  10px;
+    position: relative;
+    left: 35px;
+}
+
+.container main .cart{
+    background: #fff;
+    margin-top: -20px ;
+    border: none;
+    border-radius: 10px; 
+    padding: 15px 20px; 
+}
+.container main .cart .titre h2{
+    color: hsl(14, 86%, 42%);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.container main .cart .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container main .cart .bottom-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(12, 20%, 44%);
+    font-weight: 600;
+    font-size: 13px;
+}
+.container main .cart .cnCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: hsl(13, 31%, 94%);
+    border-radius: 5px;
+    gap: 15px;
+    padding: 5px 8px;
+    margin-top: 7px;
+    display: none;
+}
+.container main .cart .cnCart .cnText p{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(14, 65%, 9%);
+}
+.container main .cart .cnCart .cnCartSpan{
+    font-weight: 600;
+}
+.container main .cart .buttonCart{
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 0 0;
+    display: none;
+}
+.container main .cart .buttonCart button{
+    padding: 12px 78px;
+    border: none;
+    border-radius: 120px;
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.container main .cart .bigDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container main .cart .price{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin: 4px 0 10px 0;
+}
+.container main .cart .delDiv button{
+    background: hsl(13, 31%, 94%);
+    padding: 2px 4px ;
+    border-radius: 50%;
+    border: 1px solid hsl(12, 20%, 44%);
+    outline: none;
+    margin: -10px 0 0 -25px;
+}
+
+
+.container main .cart .totalSoldDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    margin-top: 8px;
+}
+
+.container .confirmOrder{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 25vw;
+    padding: 0 20px;
+    display: none;
+}
+.container .confirmOrder .svgConfirm{
+    display: flex;
+    justify-content: start;
+    width: 30px;
+    margin:  15px 0 0 0;
+}
+.container .confirmOrder .orderConfirmText{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    row-gap: 0px;
+}
+.container .confirmOrder .orderConfirmText h1{
+    color: hsl(14, 65%, 9%);
+    font-size:25px ;
+    font-weight: 700;
+}
+.container .confirmOrder .orderConfirmText p{
+    color: hsl(12, 20%, 44%);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.container .confirmOrder .orderConfirmContainer{
+    background: hsl(13, 31%, 94%);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0;
+}
+.container .confirmOrder .startNewOrder{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 20px 0
+}
+.container .confirmOrder .startNewOrder button{
+    padding: 12px 95px;
+    border: none;
+    border-radius: 120px;
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container .confirmOrder .orderConfirmContainer .bigOrderDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .confirmOrder .orderConfirmContainer .imageOrderDiv img{
+    width: 45px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.container .confirmOrder .orderConfirmContainer .priceOrderContainer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 8px 0 0 0;
+    gap: 15px;
+}
+.container .confirmOrder .orderConfirmContainer .priceOrderTotalContainer{
+    position: absolute;
+    right: 45px;
+    display: flex;
+}
+.container .confirmOrder .orderConfirmContainer .specialDiv{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 375px) {  
+    .container main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container main .cart{
+        background: #fff;
+        margin:  15px 15px 20px 15px;
+        border: none;
+        border-radius: 10px; 
+        padding: 15px 20px; 
+    }
+    
+    .container main .cart .cnCart .cnText p{
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: hsl(14, 65%, 9%);
+    }
+    .container main .cart .cnCart .cnCartSpan{
+        font-weight: 600;
+    }
+    .container main .cart .buttonCart{
+        display: flex;
+        justify-content: center;
+        margin: 8px 0 0 0;
+        display: none;
+    }
+    .container main .cart .buttonCart button{
+        padding: 12px 70px;
+        border: none;
+        border-radius: 120px;
+        background-color: hsl(14, 86%, 42%);
+        color: hsl(0, 0%, 100%);
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .container main .products{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 30px;
+        margin: 0;
+    }
+    .container main .products article{
+        padding:0;
+    }
+    .container main .products article img{
+        width: 250px;
+        border-radius: 10px;
+        object-fit: cover;
+        cursor: pointer;
+        transform: all 0.4s;
+    }
+
+    .container main .products article .btn {
+        display: flex;
+        padding: 10 25px;
+        margin-left: 17px;
+    }
+    .container main .products article .btn img{
+        width: 19px;
+        margin: auto;
+    }
+
+
+    .container .confirmOrder{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        width: 100%;
+        padding: 0 20px;
+        display: none;
+        top: 3800px;
+    }
+    .container .confirmOrder .svgConfirm{
+        display: flex;
+        justify-content: start;
+        width: 30px;
+        margin:  15px 0 0 0;
+    }
+    .container .confirmOrder .orderConfirmText{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        row-gap: 0px;
+    }
+    .container .confirmOrder .orderConfirmText h1{
+        color: hsl(14, 65%, 9%);
+        font-size:25px ;
+        font-weight: 700;
+    }
+    .container .confirmOrder .orderConfirmText p{
+        color: hsl(12, 20%, 44%);
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    .container .confirmOrder .orderConfirmContainer{
+        background: hsl(13, 31%, 94%);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    .container .confirmOrder .startNewOrder{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 20px 0
+    }
+    .container .confirmOrder .startNewOrder button{
+        padding: 12px 70px;
+        border: none;
+        border-radius: 120px;
+        background-color: hsl(14, 86%, 42%);
+        color: hsl(0, 0%, 100%);
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+
+}
